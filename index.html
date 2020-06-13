@@ -1,0 +1,67 @@
+<html>
+<head>
+<title>First Fill it</title>
+<script>
+function validation()
+{
+  var x=document.getElementById("rollno").value;
+  var y=document.getElementById("password").value;
+  if((x=="")||(y==""))
+  {
+     alert("All Fields Required");
+     return false;
+  }
+  else
+  {
+     if((x==1001)&&(y==9009))
+     return true;
+     else
+     {
+       alert("You Have Entered Wrong Details");
+       return false;
+     }
+  }
+}
+</script>
+<style>
+div.heading {
+  text-shadow:1px 1px 2px Aqua, 0 0 25px NavajoWhite, 0 0 5px yellow;
+}
+</style>
+</head>
+<body style="background-image: url('peacock.png');background-repeat:no-repeat;background-size:50% 100%;background-position:100% 0;" bgcolor=Ivory>
+<div class="heading">
+<font color=green size=50><b>.................Fill the Form................</font></b>
+</div>
+<br>
+<form action="MainPage.html" onsubmit="return validation()">
+<font color=red size=6><label>Roll No:</label><br></font>
+<input type="password" name="rollno" id="rollno" placeholder="Enter Username"/><br>
+<font color=red size=6><label>Password:</label><br></font>
+<input type="password" name="password" id="password" placeholder="Enter Password"/><br>
+<input type="submit"/>
+</form>
+<br>
+<img class="slides" src="i1.jpg" style="border-radius: 8px;height:62%;width:49%">
+<img class="slides" src="i2.jpg" style="border-radius: 8px;height:62%;width:49%">
+<img class="slides" src="i3.jpg" style="border-radius: 8px;height:62%;width:49%">
+<img class="slides" src="i4.jpg" style="border-radius: 8px;height:62%;width:49%">
+<img class="slides" src="i5.jpg" style="border-radius: 8px;height:62%;width:49%">
+<img class="slides" src="i6.jpg" style="border-radius: 8px;height:62%;width:49%">
+<script>
+var myIndex = 0;
+slideshow();
+function slideshow() {
+  var i;
+  var x = document.getElementsByClassName("slides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(slideshow, 1000);
+}
+</script>
+</body>
+</html>
